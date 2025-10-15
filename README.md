@@ -8,7 +8,7 @@ This project provides a single Bash script that **installs** or **removes** a fa
 - **Requires:** Linux, Bash, `sudo`, `udevadm` (and a machine exposing `hwmon` PWM controls)
 
 > By default the installer can copy **your own fan control script** into place. If you don’t pass one, it installs a tiny
-> **fallback helper** that toggles `pwm1_enable` (0↔1) so you can validate permissions end‑to‑end.
+> **fallback helper** that toggles `pwm1_enable` (0↔2) so you can validate permissions end‑to‑end.
 
 ---
 
