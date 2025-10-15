@@ -1,4 +1,4 @@
-# ASUS Fan Control — Installer / Uninstaller
+# ASUS Fan Control — Linux driver/installer
 
 Control ASUS laptop fans from user space without granting full root access.
 This project provides a single Bash script that **installs** or **removes** a fan‑control helper and sets **safe udev permissions** so your user (via a dedicated group) can write to PWM controls.
