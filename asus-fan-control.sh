@@ -30,7 +30,7 @@ do_install() {
 # ---- begin original install script ----
 # Installs your ASUS fan toggle script and sets safe write access via udev.
 # Usage: sudo ./install-asus-fan-control.sh /path/to/asus-fan-control.sh
-# If you omit the path, we’ll install a minimal 0<->1 toggle as a default.
+# If you omit the path, we’ll install a minimal 0<->2 toggle as a default.
 
 
 BIN_TARGET="${BIN_TARGET:-/usr/local/bin/asus-fan-control}"
@@ -64,7 +64,7 @@ if [[ -n "${SRC}" ]]; then
   fi
   install -m 0755 -o root -g root "${SRC}" "${BIN_TARGET}"
 else
-  # Fallback: tiny 0<->1 toggle (uses the ASUS nb-wmi hwmon path)
+  # Fallback: tiny 0<->2 toggle (uses the ASUS nb-wmi hwmon path)
   cat >"${BIN_TARGET}" <<'EOF'
 #!/usr/bin/env bash
 set -euo pipefail
